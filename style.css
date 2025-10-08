@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Georgia', times new roman;
+}
+
+body {
+  background: url('assets/images/bg.jpg') center/cover no-repeat fixed;
+  color: #222;
+  line-height: 1.6;
+  padding-top: 120px; /* sesuaikan dengan tinggi header */
+  min-height: 200vh;
+}
+
+/* === HEADER === */
+header {
+  display: flex;               /* bikin logo dan teks sejajar horizontal */
+  align-items: center;         /* sejajarkan vertikal */
+  justify-content: flex-start; /* rata kiri */
+  background-color: #fff;
+  padding: 20px 40px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  gap: 30px;                   /* jarak antara logo dan tulisan */
+
+position: fixed;   /* 🔹 header menempel di atas */
+  top: 0;            /* posisinya di paling atas layar */
+  left: 0;
+  width: 100%;       /* lebar penuh */
+  z-index: 1000;     /* biar selalu di atas elemen lain */
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  line-height: 1.2;
+  letter-spacing: 2px;
+}
+
+.kota {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  letter-spacing: 2px;
+}
+
+/* === FOOTER === */
+footer {
+  position: fixed;        /* biar selalu menempel di bawah layar */
+  bottom: 0;              /* posisinya di paling bawah */
+  left: 0;
+  width: 100%;            /* lebar penuh layar */
+  background-color: #4776f5;
+  color: #000000;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.1); /* bayangan halus di atas footer */
+  z-index: 1000;
+}
+
+/* === HERO SECTION === */
+.hero {
+  width: 100%;
+  height: 100vh; /* penuh satu layar */
+  background: url('assets/images/hero.jpg') center/cover no-repeat;
+}
+
+/* === NAVIGATION === */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;             /* jarak antar menu */
+  margin-left: 300px;     /* dorong menu ke kanan */
+}
+
+nav a {
+  text-decoration: none;
+  color: #1e3a8a;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #4776f5;        /* warna saat hover */
+}
