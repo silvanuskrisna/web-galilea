@@ -90,3 +90,26 @@ nav a {
 nav a:hover {
   color: #4776f5;        /* warna saat hover */
 }
+
+/* Nav barbiar bisa digeser di HP */
+header { position: sticky; top: 0; z-index: 1000; background:#fff; }
+
+nav {
+  overflow-x: auto;              /* aktifkan scroll kiri-kanan */
+  -webkit-overflow-scrolling: touch;  /* inertia scroll di iOS */
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: nowrap;             /* jangan turun ke baris baru */
+  gap: 12px;                     /* jarak antar item */
+  padding: 10px 12px;
+  margin: 0;
+  white-space: nowrap;           /* cegah pecah baris */
+  list-style: none;
+}
+
+nav li a {
+  display: inline-block;
+  padding: 8px 10px;             /* tap target nyaman di HP */
+}
