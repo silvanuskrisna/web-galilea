@@ -67,7 +67,7 @@ nav ul {
   gap: 20px;
   white-space: nowrap;     /* cegah pecah baris */
   padding: 0;
-  margin: 0;
+  margin-left: 270px;
 }
 
 nav a {
