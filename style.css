@@ -1,115 +1,125 @@
+/* =========================
+   Sekolah Kristen Galilea
+   STYLE SHEET — Cleaned Up
+   ========================= */
+
+/* Reset & base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Georgia', times new roman;
+  font-family: Georgia, "Times New Roman", serif;
 }
 
+:root{
+  --h-header-desktop: 120px;
+  --h-header-mobile: 88px;
+  --h-footer: 44px;
+  --brand-blue: #1e3a8a;
+  --hover-blue: #4776f5;
+  --text: #222;
+}
+
+/* Body & background */
 body {
   background: url('assets/images/bg.jpg') center/cover no-repeat fixed;
-  color: #222;
+  color: var(--text);
   line-height: 1.6;
-  padding-top: 120px; /* sesuaikan dengan tinggi header */
+  padding-top: var(--h-header-desktop); /* kompensasi header fixed */
+  padding-bottom: var(--h-footer);      /* kompensasi footer fixed */
   min-height: 200vh;
 }
 
-/* === HEADER === */
+/* ========== HEADER (fixed) ========== */
 header {
-  display: flex;               /* bikin logo dan teks sejajar horizontal */
-  align-items: center;         /* sejajarkan vertikal */
-  justify-content: flex-start; /* rata kiri */
-  background-color: #fff;
-  padding: 20px 40px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  gap: 30px;                   /* jarak antara logo dan tulisan */
-
-position: fixed;   /* 🔹 header menempel di atas */
-  top: 0;            /* posisinya di paling atas layar */
-  left: 0;
-  width: 100%;       /* lebar penuh */
-  z-index: 1000;     /* biar selalu di atas elemen lain */
-}
-
-.logo {
-  width: 120px;
-  height: auto;
-}
-
-h1 {
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: #1e3a8a;
-  line-height: 1.2;
-  letter-spacing: 2px;
-}
-
-.kota {
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: #1e3a8a;
-  letter-spacing: 2px;
-}
-
-/* === FOOTER === */
-footer {
-  position: fixed;        /* biar selalu menempel di bawah layar */
-  bottom: 0;              /* posisinya di paling bawah */
-  left: 0;
-  width: 100%;            /* lebar penuh layar */
-  background-color: #4776f5;
-  color: #000000;
-  text-align: center;
-  padding: 10px 0;
-  font-size: 0.9rem;
-  box-shadow: 0 -2px 8px rgba(0,0,0,0.1); /* bayangan halus di atas footer */
+  position: fixed;
+  top: 0; left: 0; right: 0;
   z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background: #fff;
+  padding: 20px 40px;
+  padding-top: calc(20px + env(safe-area-inset-top)); /* aman notch iPhone */
+  box-shadow: 0 2px 8px rgba(0,0,0,.1);
 }
 
-/* === HERO SECTION === */
-.hero {
-  width: 100%;
-  height: 100vh; /* penuh satu layar */
-  background: url('assets/images/hero.jpg') center/cover no-repeat;
+.logo { width: 120px; height: auto; }
+
+h1, .kota {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--brand-blue);
+  letter-spacing: 2px;
+  line-height: 1.2;
 }
 
-/* === NAVIGATION === */
+/* ========== NAV ========== */
+nav {
+  overflow-x: auto;                    /* bisa geser kiri-kanan di HP */
+  -webkit-overflow-scrolling: touch;   /* inertia scroll iOS */
+}
+
 nav ul {
   list-style: none;
   display: flex;
-  gap: 25px;             /* jarak antar menu */
-  margin-left: 300px;     /* dorong menu ke kanan */
+  flex-wrap: nowrap;       /* jangan turun baris */
+  gap: 20px;
+  white-space: nowrap;     /* cegah pecah baris */
+  padding: 0;
+  margin: 0;
 }
 
 nav a {
+  display: inline-block;               /* tap target */
   text-decoration: none;
-  color: #1e3a8a;
+  color: var(--brand-blue);
   font-weight: 600;
-  transition: color 0.3s;
+  padding: 8px 10px;
+  transition: color .25s ease;
 }
 
-nav a:hover {
-  color: #4776f5;        /* warna saat hover */
+nav a:hover { color: var(--hover-blue); }
+
+/* ========== HERO ========== */
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: url('assets/images/hero.jpg') center/cover no-repeat;
 }
 
-/* Nav barbiar bisa digeser di HP */
-header { position: sticky; top: 0; z-index: 1000; background:#fff; }
-
-nav {
-  overflow-x: auto;              /* aktifkan scroll kiri-kanan */
-  -webkit-overflow-scrolling: touch;  /* inertia scroll di iOS */
+/* ========== FOOTER (fixed) ========== */
+footer{
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  height: var(--h-footer);
+  background: var(--hover-blue);
+  color: #000;
+  display: grid;
+  place-items: center;
+  padding: 8px 12px;
+  font-size: .9rem;
+  box-shadow: 0 -2px 8px rgba(0,0,0,.1);
+  z-index: 1000;
 }
 
-nav ul {
-  display: flex;
-  flex-wrap: nowrap;             /* jangan turun ke baris baru */
-  gap: 12px;                     /* jarak antar item */
-  padding: 10px 12px;
-  margin: 0;
-  white-space: nowrap;           /* cegah pecah baris */
-  list-style: none;
+/* ========== UTILITIES ========== */
+.img-fluid { max-width: 100%; height: auto; display:block; }
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 992px){
+  body { padding-top: var(--h-header-mobile); }
+  .logo { width: 92px; }
 }
 
-nav li a {
-  display: inline-block;
-  padding: 8px 10px;             /* tap target nyaman di HP */
+/* Matikan background fixed di mobile (lebih halus) */
+@media (max-width: 768px){
+  body { background-attachment: scroll; }
+  nav ul { gap: 16px; }
+}
+
+/* Optional: aksesibilitas fokus nav */
+nav a:focus-visible {
+  outline: 2px solid var(--hover-blue);
+  outline-offset: 2px;
 }
