@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Profil Sekolah | Sekolah Kristen Galilea</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- HEADER -->
+  <!-- HEADER (fixed, mengikuti style.css global) -->
   <header>
-    <img src="assets/images/logo.jpg" alt="Logo Sekolah Galilea" class="logo">
+  <div class="brand">
+    <img src="assets/images/logo.png" alt="Logo Sekolah Galilea" class="logo">
     <h1>
       SEKOLAH KRISTEN GALILEA<br>
       <span class="kota">BANJARMASIN</span>
     </h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Beranda</a></li>
-        <li><a href="profil.html">Profil</a></li>
-        <li><a href="spmb.html">SPMB</a></li>
-        <li><a href="contact.html">Kontak</a></li>
-      </ul>
-    </nav>
-  </header>
+  </div>
+
+  <nav aria-label="Navigasi utama">
+    <ul>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="profil.html" aria-current="page">Profil</a></li>
+      <li><a href="under-construction.html">Program</a></li>
+      <li><a href="spmb.html">SPMB</a></li>
+      <li><a href="under-construction.html">Kontak</a></li>
+    </ul>
+  </nav>
+</header>
 
   <!-- SECTION PROFIL -->
   <main class="profil-container">
 
     <section class="profil-header">
       <h2>Profil Sekolah Kristen Galilea</h2>
-      <p><em>Mendidik dengan Kasih, Membangun dengan Iman</em></p>
+      <p><em><strong>Beriman, Berkarakter, Berilmu</strong></em></p>
     </section>
 
     <section class="profil-sejarah">
@@ -100,7 +104,10 @@
       <h3>Alamat & Kontak</h3>
       <p>Jl. KS Tubun Rt 5 No 60, Banjarmasin, Kalimantan Selatan</p>
       <p>Email: yayasananugerahunggul@gmail.com | Telp: 0822 3384 1515</p>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.0822797316605!2d114.5889968745649!3d-3.3298489966449445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de4230518d20733%3A0xd41815344c5c9925!2sSekolah%20Kristen%20Galilea%20Banjarmasin!5e0!3m2!1sen!2sid!4v1760329725040!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.0822797316605!2d114.5889968745649!3d-3.3298489966449445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de4230518d20733%3A0xd41815344c5c9925!2sSekolah%20Kristen%20Galilea%20Banjarmasin!5e0!3m2!1sen!2sid!4v1760329725040!5m2!1sen!2sid"
+        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 
   </main>

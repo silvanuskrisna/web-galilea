@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SPMB — Sekolah Kristen Galilea</title>
-  <!-- pakai CSS utama situs -->
+  <!-- CSS utama situs -->
   <link rel="stylesheet" href="style.css" />
   <!-- CSS scoped khusus halaman SPMB -->
   <style>
-    /* semua style dibatasi di dalam .spmb agar gak nimpah halaman lain */
+    /* semua style dibatasi di dalam .spmb agar tidak menimpa halaman lain */
     .spmb {
       max-width: 960px;
       margin: 0 auto;
@@ -26,18 +26,17 @@
       margin-bottom: 16px;
     }
     /* Batasin ukuran poster potret */
-  .spmb-banner {
-  display: block;
-  margin: 16px auto 8px;
-  width: 100%;
-  max-width: 520px;
-  height: auto;
-  object-fit: contain;
-  border: 4px solid #1e3a8a;
-  border-radius: 12px;
-  background-color: #fff; /* biar kontras kalau background-nya abu */
-}
-
+    .spmb-banner {
+      display: block;
+      margin: 16px auto 8px;
+      width: 100%;
+      max-width: 520px;
+      height: auto;
+      object-fit: contain;
+      border: 4px solid #1e3a8a;
+      border-radius: 12px;
+      background-color: #fff; /* kontras jika bg abu */
+    }
     .spmb .button {
       display: inline-block;
       padding: 10px 18px;
@@ -52,32 +51,46 @@
   </style>
 </head>
 <body>
-  <!-- ================== HEADER (copy dari index.html) ================== -->
+
+  <!-- ================== HEADER (seragam dengan halaman lain) ================== -->
   <header>
-    <img src="assets/images/logo.jpg" alt="Logo Sekolah Galilea" class="logo" />
-    <h1>SEKOLAH KRISTEN GALILEA <span class="kota">BANJARMASIN</span></h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Beranda</a></li>
-        <li><a href="profil.html">Profil</a></li>
-        <li><a href="under-contruction.html">Program</a></li>
-        <li><a href="spmb.html" class="active">SPMB</a></li>
-        <li><a href="under-contruction.html">Kontak</a></li>
-      </ul>
-    </nav>
-  </header>
+  <div class="brand">
+    <img src="assets/images/logo.png" alt="Logo Sekolah Galilea" class="logo">
+    <h1>
+      SEKOLAH KRISTEN GALILEA<br>
+      <span class="kota">BANJARMASIN</span>
+    </h1>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="profil.html">Profil</a></li>
+      <li><a href="under-construction.html">Program</a></li>
+      <li><a href="spmb.html" aria-current="page">SPMB</a></li>
+      <li><a href="under-construction.html">Kontak</a></li>
+    </ul>
+  </nav>
+</header>
 
   <!-- ================== KONTEN SPMB ================== -->
   <main class="spmb">
     <img src="assets/images/SPMB.jpeg" alt="Poster Penerimaan Siswa Baru" class="spmb-banner" />
 
     <h2>Penerimaan Siswa Baru 2025/2026</h2>
-    <p>Segera daftarkan putra-putri Anda di Sekolah Kristen Galilea Banjarmasin.<br/>
-       Berkarakter, Beriman, Berilmu.</p>
+    <p>
+      Segera daftarkan putra-putri Anda di Sekolah Kristen Galilea Banjarmasin.<br />
+      Berkarakter, Beriman, Berilmu.
+    </p>
 
-  <!-- ================== FOOTER (copy dari index.html) ================== -->
+    <!-- contoh tombol (opsional) -->
+    <!-- <p><a class="button" href="form-pendaftaran.html">Daftar Sekarang</a></p> -->
+  </main>
+
+  <!-- ================== FOOTER ================== -->
   <footer>
     <p>© 2025 Sekolah Kristen Galilea. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
