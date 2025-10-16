@@ -5,49 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Program Pendidikan | Sekolah Kristen Galilea</title>
   <link rel="stylesheet" href="style.css" />
-  <!-- Scoped CSS khusus halaman Program (ringkas, tidak menimpa global) -->
-  <style>
-    .program { max-width: 1000px; margin: 120px auto 90px; padding: 0 20px; color:#222; }
-    .program header.program-hero { text-align: center; margin-bottom: 28px; }
-    .program header.program-hero h2 { color:#1e3a8a; font-size: 1.9rem; margin-bottom: 8px; }
-    .program header.program-hero p { color:#555; font-size: 1.02rem; }
-
-    .program section { margin-top: 24px; }
-    .program h3 { color:#1e3a8a; margin: 12px 0 8px; }
-
-    /* Padatkan kartu & grid */
-    .program .grid-program { gap: 16px; }
-    .program .card-program { padding: 16px; }
-    .program .card-program h4 { margin-bottom: 8px; }
-    .program .card-program p { margin: 4px 0 0; color:#333; }
-
-    .program .grid-fasilitas { gap: 12px; }
-    .program .grid-fasilitas div { padding: 10px; }
-
-    .program .kegiatan-list { display:grid; grid-template-columns: repeat(auto-fit, minmax(210px,1fr)); gap:12px; }
-    .program .kegiatan-item { background:#f8faff; border:1px solid #c7d2fe; border-radius:10px; padding:12px; font-weight:600; color:#1e3a8a; text-align:center; }
-
-    .program .cta { text-align:center; margin-top:24px; }
-    .program .btn {
-      display:inline-block; padding:10px 16px; border-radius:10px; text-decoration:none;
-      background:#1e3a8a; color:#fff; font-weight:700;
-      transition: transform .06s ease, opacity .2s ease, box-shadow .2s ease;
-      box-shadow:0 4px 12px rgba(30,58,138,.15);
-    }
-    .program .btn:hover { transform: translateY(-1px); opacity:.95; }
-
-    @media (max-width: 768px){
-      .program { margin-top: 100px; }
-    }
-  </style>
 </head>
 <body>
 
-  <!-- HEADER (seragam) -->
+  <!-- HEADER situs (tetap) -->
   <header>
     <div class="brand">
-      <!-- NOTE: Jika file ini berada di subfolder (mis. /pages/program.html), ubah src menjadi "../assets/images/logo.jpg" atau "/assets/images/logo.jpg" -->
-      <img src="assets/images/logo.jpg" alt="Logo Sekolah Galilea" class="logo" />
+      <img src="assets/images/logo.png" alt="Logo Sekolah Galilea" class="logo" />
       <h1>
         SEKOLAH KRISTEN GALILEA<br />
         <span class="kota">BANJARMASIN</span>
@@ -68,10 +32,10 @@
   <main class="program">
 
     <!-- Pembuka -->
-    <header class="program-hero">
+    <section class="program-hero">
       <h2>Program Pendidikan Sekolah Kristen Galilea</h2>
-      <p><em>Mendidik dengan kasih, membimbing dalam iman, menumbuhkan potensi anak.</em></p>
-    </header>
+      <p><em>Beriman, Berkarakter, Berilmu.</em></p>
+    </section>
 
     <!-- Jenjang Pendidikan -->
     <section aria-labelledby="jenjang">
@@ -83,7 +47,7 @@
         </article>
         <article class="card-program">
           <h4>SD</h4>
-          <p>Kurikulum dasar yang kuat, pembentukan disiplin & tanggung jawab, pendampingan iman dan karakter.</p>
+          <p>Transisi PAUD - SD, Kurikulum dasar, pembentukan disiplin & tanggung jawab, pendampingan iman dan karakter.</p>
         </article>
         <article class="card-program">
           <h4>SMP</h4>
@@ -97,16 +61,16 @@
       <h3 id="unggulan">Program Unggulan</h3>
       <div class="grid-program">
         <article class="card-program">
+          <h4>Morning Devotions</h4>
+          <p>Doa dan renungan pagi bersama untuk memulai hari dengan fokus & syukur.</p>
+        </article>
+        <article class="card-program">
           <h4>Character Building</h4>
           <p>Pembentukan karakter berbasis nilai Alkitab & keteladanan sehari-hari.</p>
         </article>
         <article class="card-program">
           <h4>English Day & Literacy</h4>
           <p>Praktik percakapan & literasi melalui jurnal dan reading corner.</p>
-        </article>
-        <article class="card-program">
-          <h4>Morning Devotion</h4>
-          <p>Doa dan renungan pagi bersama untuk memulai hari dengan fokus & syukur.</p>
         </article>
         <article class="card-program">
           <h4>IT & Digital Skills</h4>
@@ -119,11 +83,11 @@
     <section aria-labelledby="ekstra">
       <h3 id="ekstra">Ekstrakurikuler</h3>
       <div class="grid-fasilitas">
-        <div>Musik & Paduan Suara</div>
-        <div>Olahraga (Futsal, Basket)</div>
+        <div>Musik</div>
+        <div>Olahraga</div>
         <div>Komputer & Coding</div>
         <div>Seni & Kreativitas</div>
-        <div>Robotik (opsional)</div>
+        <div>Pramuka</div>
         <div>Bahasa Inggris</div>
       </div>
     </section>
@@ -132,11 +96,11 @@
     <section aria-labelledby="kegiatan">
       <h3 id="kegiatan">Kegiatan Tahunan</h3>
       <div class="kegiatan-list">
-        <div class="kegiatan-item">Retreat & Camp</div>
-        <div class="kegiatan-item">Field Trip</div>
-        <div class="kegiatan-item">Galilea Festival</div>
-        <div class="kegiatan-item">Science / Art Fair</div>
+        <div class="kegiatan-item">A G C</div>
+        <div class="kegiatan-item">Galilea Festifal</div>
         <div class="kegiatan-item">Graduation Ceremony</div>
+        <div class="kegiatan-item">Pentas Seni</div>
+        <div class="kegiatan-item">Paskah & Natal</div>
       </div>
     </section>
 
